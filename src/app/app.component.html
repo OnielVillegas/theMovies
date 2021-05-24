@@ -1,0 +1,20 @@
+<p>
+  <mat-toolbar>
+    <span>My Application</span>
+  </mat-toolbar>
+</p>
+
+<mat-nav-list class="example-card">
+  <mat-card *ngFor="let movies of movies" (click)="openDialog(movies)">
+    <mat-card-header>
+      <mat-card-title>{{movies.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{movies.poster_path}}">
+    <mat-card-content></mat-card-content>
+  </mat-card>
+</mat-nav-list>
+
+<br>
+<br>
+
+<button mat-raised-button color="primary" (click)="ngOnInit()">Next</button>
